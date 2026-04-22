@@ -1,0 +1,7 @@
+docker run -d -p 8080:80 --name uebung2-nginx nginx
+docker ps
+docker logs uebung2-nginx
+docker stop uebung2-nginx
+docker start uebung2-nginx
+docker ps
+docker rm -f uebung2-nginx

@@ -1,0 +1,5 @@
+docker run hello-world
+docker run -p 8080:80 --name uebung1-nginx nginx
+docker ps
+docker stop uebung1-nginx
+docker rm uebung1-nginx
