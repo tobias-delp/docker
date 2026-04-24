@@ -12,6 +12,13 @@ def home():
         "topic": "Dockerfile lesen und verbessern",
     }
 
+@app.get("/dingens")
+def dingens():
+    return {
+        "message": "Hallo Dingens",
+        "course": "Software Engineering",
+        "topic": "Dockerfile lesen und verbessern",
+    }
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
