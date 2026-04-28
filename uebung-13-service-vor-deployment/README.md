@@ -17,6 +17,7 @@ Ein lokaler Kubernetes-Cluster ist verfuegbar.
 2. `kubectl apply -f service.yaml`
 3. `kubectl get pods`
 4. `kubectl get svc`
+5. `kubectl port-forward svc/webapp-service 8080:80`
 
 ## Fragen
 
