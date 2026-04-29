@@ -1,0 +1,16 @@
+name: Manual Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy vorbereiten
+        run: echo "Deploy wird vorbereitet"
+      - name: Deploy ausfuehren
+        run: bash deploy.sh
