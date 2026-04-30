@@ -1,19 +1,19 @@
 services:
   app:
-    image: myapp:1.0.0
+    image: nginx
     environment:
       DB_HOST: db
       DB_PASSWORD: ${DB_PASSWORD}
     depends_on:
-      - db
-    healthcheck:
-      test: ["CMD", "echo", "ok"]
-      interval: 30s
-      timeout: 5s
-      retries: 3
-
+      db:
+        condition: service_healthy
+        
   db:
-    image: postgres:16
+    image: nginx
     environment:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
-
+    healthcheck:
+          test: ["CMD", "echo", "ok"]
+          interval: 30s
+          timeout: 10s
+          retries: 3
