@@ -1,0 +1,11 @@
+services:
+  app:
+    image: myapp:latest
+    environment:
+      DB_PASSWORD: secret123
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: secret123
