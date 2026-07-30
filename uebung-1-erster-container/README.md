@@ -6,7 +6,9 @@ Ziel: Einen fertigen Container starten und den Unterschied zwischen Image und Co
 
 1. `docker run hello-world`
 2. `docker run -p 8080:80 --name uebung1-nginx nginx`
-3. `http://localhost:8080` im Browser oeffnen
+3. `docker ps`
+4. `docker ps -a`
+5. `http://localhost:8080` im Browser oeffnen
 
 ## Leitfragen
 
